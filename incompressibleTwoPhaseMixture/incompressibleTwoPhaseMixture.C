@@ -429,7 +429,7 @@ void twoPhaseMixture::updateContactAngle(volScalarField& curAlpha1_, scalar *bou
 
             //-Create a reference to the patch field. Note that this variable can be treated
             // as a scalar field containing the values of curAlpha1_ on the boundary face
-            fixedGradientFvPatchScalarField& curPatch = refCast<fixedGradientFvPatchScalarField>(curAlpha1_.boundaryField()[patchi]);
+            fixedGradientFvPatchScalarField& curPatch = refCast<fixedGradientFvPatchScalarField>(curAlpha1_.boundaryFieldRef()[patchi]);
 
             //-Create a pointer reference to the gradient field
             scalarField& gradAlpha1 = curPatch.gradient();

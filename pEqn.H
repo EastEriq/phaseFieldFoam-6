@@ -32,14 +32,8 @@
     phiHbyA += phig;
 
     //-Update the fixedFluxPressure BCs to ensure flux consistency
-    setSnGrad<fixedFluxPressureFvPatchScalarField>
-    (
-        p_rgh.boundaryField(),
-        (
-            phiHbyA.boundaryField()
-          - (mesh.Sf().boundaryField() & U.boundaryField())
-        )/(mesh.magSf().boundaryField()*rAUf.boundaryField())
-    );
+    // from https://www.cfd-online.com/Forums/openfoam-programming-development/187041-problem-compiling-solver-made-different-version-v2-0-v4-1-a.html
+     constrainPressure(p_rgh, U, phiHbyA, rAUf);
 
     while (pimple.correctNonOrthogonal())
     {

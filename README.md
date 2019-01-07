@@ -20,3 +20,8 @@ Ported to OpenFOAM version 3.0.0:
 ---------------------------------
 
    Weiss, Sebastian: TU Bergakademie Freiberg, Germany
+
+Ported to OpenFOAM v6 20181221:
+---------------------------------
+
+   Enrico Segre, Weizmann Institute, Israel

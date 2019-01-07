@@ -37,6 +37,9 @@ Description
     Ported to OpenFOAM version 2.2.0:
     Weiss, Sebastian: TU Bergakademie Freiberg, Germany
 
+    Ported to OpenFOAM version 6 20181221:
+    Enrico Segre, Weizmann Institute, Israel
+
 \*---------------------------------------------------------------------------*/
 
 #include "fvCFD.H"
@@ -45,7 +48,8 @@ Description
 #include "incompressibleTwoPhaseMixture.H"
 #include "turbulentTransportModel.H"
 #include "pimpleControl.H"
-#include "fvIOoptionList.H"
+#include "fvOptions.H"
+#include "fvOptionList.H"
 #include "CorrectPhi.H"
 #include "fixedFluxPressureFvPatchScalarField.H"
 
